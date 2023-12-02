@@ -1,14 +1,16 @@
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
 
 import $ from 'jquery'
 import axios from 'axios';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import DataButton from './DataButton';
-import Under from './Under';
+
+import CardCss from './CardCss';
 
 function App() {
-  
   
   return (
     <>
@@ -101,6 +103,7 @@ function App() {
     <div className="render_box">
         <div className="video_wrap">
                 <DataButton />
+                
         </div>
         <div className="data_box">
             <div className="state_change_box">
@@ -136,7 +139,8 @@ function App() {
         <button className="alert_handler" type="button">임시 alert 팝업 띄우기</button>
         <button className="confirm_handler" type="button">임시 confirm 팝업 띄우기</button>
     </div>
-
+    
+    <CardCss/> 
 
 </section>
 
@@ -177,6 +181,8 @@ function App() {
         <button className="cancel_btn" id="confirm_cancel" type="button">취소</button>
         <button className="agree_btn" id="confirm_confirm" type="submit">변경</button>
     </div>
+    
+    
 </div>
 
 
