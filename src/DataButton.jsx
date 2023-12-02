@@ -19,12 +19,13 @@ const DataButton = () => {
             
             onClick={()=>{
                 axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${idx + 1}`)
-                .then((Response)=>{
-                    console.log(Response.data.data.movie)
-                    const innerData = Response.data.data.movie
+                .then((Response)=>{ // api 연동이 성공했을 때!!
+                    console.log(Response.data) // 콘솔에서 어떤 데이터를 넘겨오는지 확인하기
+                    console.log(Response.data.data.movie) // 제가 원하는 데이터는 이거에요
+                    const innerData = Response.data.data.movie 
     
-                    setItemData(innerData)
-                }).catch((Error)=>{
+                    setItemData(innerData) // 미리 준비한 state에 api로 가져온 데이터 넣어버리기
+                }).catch((Error)=>{ // api 연동이 실패했을 때!
                     console.log(Error)
                 })
                 
@@ -36,7 +37,12 @@ const DataButton = () => {
         </div>
         <div className="video_box">
                 <div className="video_over_box">
-                    {itemData}
+                    <ul>
+                        <li><img src={itemData.medium_cover_image} alt="#" /></li>
+                        <li>{itemData.year}</li>
+                        <li>{itemData.date_uploaded}</li>
+                        <li>{itemData.title}</li>
+                    </ul>
                 </div>
             </div>
     </>
