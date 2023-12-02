@@ -18,7 +18,7 @@ const DataButton = () => {
             <button key={idx} className='video_btn' 
             
             onClick={()=>{
-                axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${idx + 1}`)
+                axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${idx + 1}`) // 어떤 데이터가 넘어오는지 알고 싶으면 url을 직접 검색창에 넣어보기
                 .then((Response)=>{ // api 연동이 성공했을 때!!
                     console.log(Response.data) // 콘솔에서 어떤 데이터를 넘겨오는지 확인하기
                     console.log(Response.data.data.movie) // 제가 원하는 데이터는 이거에요
