@@ -1,4 +1,4 @@
-![image](https://github.com/justice725/songwonjeong/assets/84830256/9383b857-0a1e-4d79-8713-1e43ac79c77e)1. 소스 다운로드하기!
+1. 소스 다운로드하기!
  (1) 깃에서 clone 하기 위한 주소 복사하기
 ![1](https://github.com/justice725/songwonjeong/assets/84830256/a2c3f98a-6806-451f-bbae-3526c4ad94c2)
 
